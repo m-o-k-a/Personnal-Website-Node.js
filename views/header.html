@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang={{lang.uage}}>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+    <title>Eddy Ikhlef {{lang.website}}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link href="/stylesheet.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="text-center container d-flex h-100 p-5 mx-auto flex-column">
+      <div class="custom-navbar mb-auto main-text">
+        <div class="inner">
+          <h3 class="custom-navbar-title">Eddy Ikhlef - {{lang.website}}</h3>
+          <nav class="nav justify-content-center custom-navbar-items">
+            {{#isHome}}<a class="nav-item active-item" href="/">{{lang.home}}</a>{{/isHome}}
+            {{^isHome}}<a class="nav-item" href="/">{{lang.home}}</a>{{/isHome}}
+            {{#isAboutme}}<a class="nav-item active-item" href="/aboutme">{{lang.about}}</a>{{/isAboutme}}
+            {{^isAboutme}}<a class="nav-item" href="/aboutme">{{lang.about}}</a>{{/isAboutme}}
+            {{#isProjects}}<a class="nav-item   active-item" href="/projects">{{lang.projects}}</a>{{/isProjects}}
+            {{^isProjects}}<a class="nav-item" href="/projects">{{lang.projects}}</a>{{/isProjects}}
+            {{#isCv}}<a class="nav-item active-item" href="/cv">{{lang.cv}}</a>{{/isCv}}
+            {{^isCv}}<a class="nav-item" href="/cv">{{lang.cv}}</a>{{/isCv}}
+          </nav>
+          <hr>
+        </div>
+      </div>
+      <main role="main" class="inner cover">
