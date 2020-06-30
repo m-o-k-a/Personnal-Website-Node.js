@@ -34,6 +34,17 @@ app.get('/cvdownload', getLang, (req, res) => {
   res.render(req.session.lang+'/cvdownload');
 });
 
+/* Languages Routes */
+app.get('/EN', getLang, (req, res) => {
+  req.session.lang = "EN";
+  res.redirect('back');
+});
+
+app.get('/FR', getLang, (req, res) => {
+  req.session.lang = "FR";
+  res.redirect('back');
+});
+
 function getLang(req, res, next) {
   if (req.session.lang == undefined || req.session.lang == null) { req.session.lang = "EN"; }
   next();
@@ -44,5 +55,8 @@ function fillLang(language) {
 	if(language == "EN") {
 		lang.uage = "en"; lang.website = "Personnal Website"; lang.home = "Home"; lang.about = "About Me"; lang.projects = "Projects"; lang.cv = "CV";
 	}
+  else if(language == "FR") {
+    lang.uage = "fr"; lang.website = "Site Perso"; lang.home = "Acceuil"; lang.about = "A Propos"; lang.projects = "Projets"; lang.cv = "CV";
+  }
 	return lang;
 }
