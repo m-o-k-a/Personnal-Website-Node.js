@@ -110,7 +110,8 @@ footer {
 .download-pdf {
   position: absolute;
   top: 10%;
-  right: -10%;
+  right: -25%;
+  bottom: 0px;
 }
 
 /* no scrollbar */
@@ -120,6 +121,7 @@ body::-webkit-scrollbar { display: none; }
 .card {
   background: rgba(255, 255, 255, 0.1);
 }
+
 .card-header {
   background: transparent;
 }
@@ -128,3 +130,22 @@ body::-webkit-scrollbar { display: none; }
   border-style: none;
 }
 
+/* animation */
+.fade-in {
+  animation-duration: 1s;
+  animation-name: fade-in;
+}
+.fade-in-slow {
+  animation-duration: 2s;
+  animation-name: fade-in;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
