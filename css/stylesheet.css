@@ -151,20 +151,28 @@ body::-webkit-scrollbar { display: none; }
 }
 
 /* cv box */
+.details {
+  font-size: 0.8em;
+}
+
 details {
     padding: .5em .5em 0;
+    margin-bottom: 0.5em;
 }
 
 summary {
     margin: -.5em -.5em 0;
     padding: .5em;
+    padding-bottom: 0em; 
 }
 
 details[open] {
     padding: .5em;
+    padding-bottom: 0em; 
 }
 
 details[open] summary {
     border-bottom: 1px solid rgba(128,128,128, 0.5);
     margin-bottom: .5em;
+    padding-bottom: 0em; 
 }

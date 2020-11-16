@@ -31,7 +31,8 @@ app.get('/cv', getLang, (req, res) => {
 });
 
 app.get('/cvdownload', getLang, (req, res) => {
-  res.render(req.session.lang+'/cvdownload');
+  const file = './cv/CV_EDDY_IKHLEF_'+req.session.lang+'.pdf';
+  res.download(file);
 });
 
 /* Languages Routes */
@@ -46,7 +47,7 @@ app.get('/FR', getLang, (req, res) => {
 });
 
 function getLang(req, res, next) {
-  if (req.session.lang == undefined || req.session.lang == null) { req.session.lang = "EN"; }
+  if (req.session.lang == undefined || req.session.lang == null) { req.session.lang = "FR"; }
   next();
 };
 
