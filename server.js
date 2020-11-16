@@ -10,6 +10,10 @@ app.use(cookieSession({ secret: 'wo-ai-zhongguo', }));
 
 var img = app.use(express.static(__dirname + '/img'));
 var css = app.use(express.static(__dirname + '/css'));
+var js = app.use(express.static(__dirname + '/js'));
+
+/* js */
+var printCV = require('./js/printcv.js');
 
 /* Routes */
 app.listen(3000, () => console.log('listening on http://localhost:3000'));
@@ -31,8 +35,9 @@ app.get('/cv', getLang, (req, res) => {
 });
 
 app.get('/cvdownload', getLang, (req, res) => {
-  const file = './cv/CV_EDDY_IKHLEF_'+req.session.lang+'.pdf';
-  res.download(file);
+  //const file = './cv/CV_EDDY_IKHLEF_'+req.session.lang+'.pdf';
+  //res.download(file);
+  printCV();
 });
 
 /* Languages Routes */

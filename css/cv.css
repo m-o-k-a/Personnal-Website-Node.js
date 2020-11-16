@@ -1,14 +1,20 @@
 /* basic elements */
 html,
 body {
+  page-break-inside: avoid;
+  break-inside: avoid;
+  -webkit-print-color-adjust: exact;
+  color-adjust: exact;
   color: white;
   width: 100%;
   height: 100%;
-  background-image: url("/bkg.jpg");
+  background-color: white;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
+  color: red;
+  display: table;
 }
 
 a,
@@ -100,6 +106,8 @@ footer {
 }
 
 .header-cv {
+    -webkit-print-color-adjust: exact;
+  color-adjust: exact;
   background-color: steelblue !important;
   border-width: 1px !important;
   border-style: line !important;
@@ -175,4 +183,11 @@ details[open] summary {
     border-bottom: 1px solid rgba(128,128,128, 0.5);
     margin-bottom: .5em;
     padding-bottom: 0em; 
+}
+
+/*print */
+@media print {
+  div {
+    break-inside: avoid;
+  }
 }
