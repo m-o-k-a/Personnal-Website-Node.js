@@ -56,7 +56,7 @@ function fillLang(language) {
 		lang.uage = "en"; lang.website = "Personnal Website"; lang.home = "Home"; lang.about = "About Me"; lang.projects = "Projects"; lang.cv = "CV";
 	}
   else if(language == "FR") {
-    lang.uage = "fr"; lang.website = "Site Perso"; lang.home = "Acceuil"; lang.about = "A Propos"; lang.projects = "Projets"; lang.cv = "CV";
+    lang.uage = "fr"; lang.website = "Site Perso"; lang.home = "Accueil"; lang.about = "A Propos"; lang.projects = "Projets"; lang.cv = "CV";
   }
 	return lang;
 }
