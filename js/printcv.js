@@ -44,7 +44,7 @@ function printCVShort() {
     '<body>'+
     '<main role="main" class="inner cover">'
   );
-  w.document.write(document.getElementById('cv').innerHTML.replaceAll('<details open>', '<details hidden="true">').replaceAll('<div class="Simple" hidden="true">', '<div class="Simple">'));
+  w.document.write(document.getElementById('cv').innerHTML.replaceAll('<details', '<details hidden = "true" ').replaceAll('<div class="Simple" hidden="true">', '<div class="Simple">'));
   w.document.write('</main></body></html>');
   w.document.close(); // necessary for IE >= 10
   w.focus(); // necessary for IE >= 10
